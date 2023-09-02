@@ -1,0 +1,129 @@
+*{
+	margin:0;
+	padding:0;
+}
+body {
+	background: black;
+	color: white;
+	font-family: "Arial";
+	position: relative;
+}
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+}
+
+p {
+	font-size: 30px;
+	text-align: center;
+}
+.pill-box > p {
+	max-width: 300px;
+}
+
+button {
+	background: #713c73;
+	color: white;
+	padding: 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 20px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+
+}
+
+header {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom:10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	margin-top:10px;
+	position: relative;
+	height:100vh;
+
+
+
+
+}
+.blur-bg{
+	background : url('../asset/img2/bg.png') no-repeat center center;
+	background-size: cover;
+	height: 100%;
+	width:100%;
+	position: absolute;
+	filter:blur(15px) brightness(0.8) contrast(1.2);
+	z-index: -1;
+}
+.info-wrapper{
+	 text-align: center;
+	 font-size: 20px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 flex-direction: column;
+	transform: translateY(-100%);
+ }
+
+.info-wrapper> p{
+max-width:500px;
+
+}
+.pill-grid{
+	display:flex;
+	gap:20px;
+		justify-content: center;
+	align-items: center;
+	background: #101010;
+    padding:20px;
+
+}
+
+.pill-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #2c2c2c;
+	border-radius:5px;
+	padding:10px;
+
+}
+
+.pill-image{
+	width:300px;
+	margin:20px;
+}
+
+.title-wrapper{
+	margin:10px;
+}
+
+bo{
+animation: cool infinite alternate-reverse 500ms;
+}
+@keyframes cool {
+	from {
+		color:red;
+		transition: background-color 500ms;
+	}
+	25%{
+		color:orange;
+	}
+	50%{
+		color:yellow;
+	}
+
+	to{
+		color:green
+
+	}
+}
+
+
+

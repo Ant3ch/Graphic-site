@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What's a graphic card ?</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+    <script src="https://kit.fontawesome.com/36c0fd6c49.js" crossorigin="anonymous"></script>
+    <meta name="viewport">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <script defer src="js/app.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <a id="home" href="#" class="home-button">HOME</a>
+
+    <ul class="nav-menu">
+
+        <li class="nav-item"><a href="#what-graphic">What's a graphic card ?</a></li>
+        <li class="nav-item"><a href="./NVDIA.html">NVIDA ?</a></li>
+
+        <li class="nav-item"><a href="#pricing">pricing</a></li>
+        <!-- Get  sub menu -->
+        <li class="nav-item"><a onmouseenter="this.style.setProperty('cursor','pointer')" onclick="open_menu()">get one<i  style='margin-left: 5px; font-size: 25px;transition: 200ms;' class="fa fa-arrow-down"></i></a>
+            <ul class="sub-menu">
+                <li class="nav-item"><a href="https://www.amd.com/fr.html">AMD</a></li>
+                <li class="nav-item"><a href="https://www.nvidia.com/fr-fr/">NVDIA</a></li>
+                <li class="nav-item"><a href="https://fr.msi.com/">MSI</a></li>
+
+            </ul>
+        </li>
+
+        <li class="nav-item"><a href="#">About</a></li>
+
+    </ul>
+
+</nav>
+<header>
+    <div class="graphic-card-3d-wrapper">
+
+        <model-viewer id="graphic-card-3d" reveal="manual" src="./asset/models/graphic.gltf" camera-controls disable-zoom disable-tap auto-rotate shadow-intensity="1"  camera-orbit="50deg" touch-action="pan-y">
+            <div id="lazy-load-poster" slot="poster"></div>
+            <div onclick="load_3dmodel()" id="button-load" slot="poster">Load 3D Model</div>
+        </model-viewer>
+    </div>
+    <h1> Graphics cards</h1>
+
+    <div class="blurred"></div>
+</header>
+
+<section id="what-graphic">
+    <h1 class="wht">What's a <strong style="
+    font-weight: bolder;
+">graphic card ? </strong></h1>
+    <div class="section-content">
+        <img  class='grahic-card' alt='computer schema' src="./asset/img/graphic%20ico.png"/>
+        <p>A graphics card (also called a video card, display card, graphics adapter, VGA card/VGA, video adapter, display adapter, or colloquially GPU) is a computer expansion card that generates a feed of graphics output to a display device such as a monitor. Graphics cards are sometimes called discrete or dedicated graphics cards to emphasize their distinction to integrated graphics processor on the motherboard or the CPU. A graphics processing unit (GPU) that performs the necessary computations is the main component in a graphics card, but the acronym "GPU" is sometimes also used to refer to the graphics card as a whole.</p>
+    </div>
+</section>
+
+<section class="graphic" id="how-it-work">
+    <h1 class="wht">How does <strong style="
+    font-weight: bolder;
+">it work ? </strong></h1>
+    <div class="section-content">
+        <div class="graphic-card-wrapper">
+        <img  class='grahic-card' alt='graphic card' src="./asset/img/how-it-work.png"/>
+            <p>graphics cards process and render 3d images to a screen that why we also call it video card or GPU(<i>Graphical processing unit</i>). in fact the GPU helps the CPU to render everything because the CPU is responsible initially for all task(such as executing, rendering , etc...) . </p>
+        </div>
+        <div class="graphic-card-wrapper">
+            <img  class='grahic-card' alt='graphic card' src="./asset/img/Graphics-Card-Components.jpg"/>
+
+            <p>a graphics cards contains a processing Unit used to render 3d graphics and has his own RAM often called VRAM. It also has a cooling system, otherwise it would burn quickly. also it has several PCI EXPRESS that are <strong>"plug and play</strong>" port to connect the GPU to a motherboard. </p>
+        </div>
+    </div>
+</section>
+<section class="graphic" id="gpu-cpu">
+    <h1 class="wht">shoud I choose <strong style="
+    font-weight: bolder;
+">Integrated or External GPU ?</strong></h1>
+    <div class="section-content">
+        <div class="graphic-card-wrapper2">
+            <img  class='grahic-card' alt='graphic card' src="./asset/img/gpu.png"/>
+            <p>Integrated</p>
+            <ul class="con-pos">
+                <li>consumes less</li>
+                <li>take less space</li>
+                <li>but less performance</li>
+
+            </ul>
+        </div>
+
+        <div class="graphic-card-wrapper2">
+            <img  class='grahic-card' alt='graphic card' src="./asset/img/cpu.png"/>
+            <p>External</p>
+            <ul class="con-pos">
+                <li>Consumes more</li>
+                <li>more expensive</li>
+                <li>less compact</li>
+                <li>but better performances</li>
+
+
+
+            </ul>
+        </div>
+
+</section>
+
+<section id="pricing" >
+    <h1>Pricing (for gaming !)</h1>
+    <div class="section-content">
+
+        <div class="pricing-card">
+            <img alt='Image' src="asset/img/potato.jpg"/>
+
+             <p class="sub-title">Potato cards</p>
+            <p class="description">Does it work ? I'm asking it myself, but it's the cheapest you can find I can guarantee you</p>
+
+             <p class="price-fork">5€</p>
+             <button  id="funny-button" class="order">Order</button>
+
+         </div>
+
+        <div class="pricing-card">
+            <img alt='Image' src="asset/img/radeon.png"/>
+
+            <p class="sub-title">great cards</p>
+            <p class="description">If the potato it's not enough there is these cards that work for pretty much all the games available. Surely you can't use RTX or Fancy technologies with it... </p>
+
+            <p class="price-fork">250-300€</p>
+
+
+        </div>
+        <div class="pricing-card">
+            <img alt='Image' src="asset/img/price_of_your_house.jpg"/>
+
+            <p class="sub-title">REALLY expensive cards</p>
+            <p class="description">Litteraly expensive and "unlimited power" !!</p>
+
+            <p class="price-fork">5^4€</p>
+
+
+        </div>
+
+
+
+    </div>
+</section>
+
+<section id="about">
+
+</section>
+
+<footer>
+    <div class="footer-content">
+        <i class="fa-brands fa-discord"></i>
+        <p>Antech#0300</p>
+        
+    </div>
+</footer>
+<script rel="script" src="js/script.js" type="text/javascript"></script>
+
+</body>
+</html>

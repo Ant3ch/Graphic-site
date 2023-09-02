@@ -1,0 +1,109 @@
+:root{
+    /*Colors*/
+    --bg-color: #2f2f2f;
+    --score-color:white;
+    --reset-button-color:rgb(95, 95, 210);
+    --apple-color:red;
+    --snake-cell-color:green;
+    --canvas-bg: #111111;
+
+    /*board*/
+    --game-board-size-width:80%;
+    --game-board-size-height:80%;
+
+    --score-button-margin:1rem;
+
+
+}
+*{
+    margin:0;
+    padding:0;
+}
+
+#game{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color:var(--bg-color);
+    width:100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#gameboard{
+
+    background: var(--canvas-bg);
+    width:var(--game-board-size-width);
+    height:var(--game-board-size-height);
+    border: 5px solid rgba(255,255,255,0.8);
+    box-shadow: #00ff2d 1px 1px 10px;
+
+    display:grid;
+    grid-template-rows: repeat(15,1fr);
+    grid-template-columns: repeat(28,1fr);
+
+}
+
+
+.tools{
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+
+}
+
+p.score {
+    color:var(--score-color);
+    font-size:2rem;
+    margin:var(--score-button-margin)
+
+}
+
+@font-face {
+    font-family: "Retro Gaming";
+    src: url("/asset/fonts/retrogaming.ttf") format("truetype");
+
+}
+.reset{
+    background-color:var(--reset-button-color);
+    color:white;
+    font-size:1.7rem;
+    padding:0.5rem;
+    border:solid 2px black;
+    border-radius:10px;
+    margin:var(--score-button-margin);
+    text-transform:uppercase;
+    font-family: "Retro Gaming", Arial, Helvetica, sans-serif;
+    cursor:pointer;
+    transition:padding 300ms;
+
+
+}
+
+.reset:hover{
+    --reset-button-color: rgb(109, 109, 250);
+    transition:padding 500ms;
+    padding:0.8rem;
+
+}
+
+.snake-cell{
+    background-color:var(--snake-cell-color);
+    width:1fr;
+    height:1fr;
+    border:1px solid white
+
+}
+
+.apple{
+    background: var(--apple-color);
+    width:1fr;
+    height:1fr;
+    border:1px solid white
+}

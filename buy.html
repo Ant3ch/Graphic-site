@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valkyr</title>
+	<link rel="stylesheet" type="text/css" href="css/buy.css">
+</head>
+<body>
+
+
+	<header>
+		<div class="blur-bg"></div>
+		<div class="title-wrapper">
+			<h1>Valkyr</h1>
+			<p>Live a pure <bo>MDMA</bo> experience</p>
+		</div>
+
+		<div class="info-wrapper">
+
+			<p>When taking <bo>MDMA</bo> , it is ecommended not to exceed a maximum dose of 1.5 mg <bo>MDMA</bo>  per kg bodyweightfor men and 1.3 mg <bo>MDMA</bo>  per kg bodyweight for women.</p>
+		<p>In general, a dose of 120 mg should not be exceeded. After ingestion, be sure to hydrate sufficiently. Only obtain <bo>MDMA</bo>  from trustworth sources.</p>
+		<small>* information not guarantueed</small>
+		</div>
+
+	</header>
+
+	<section id="sell" class="pill-grid">
+		<div class="pill-box">
+			<img class="pill-image" src="./asset/img2/pill1.png">
+			<p class="pill-info">Starter Ecstasy Pill - 100mg <bo>MDMA</bo> </p>
+			<button onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank')" class="buy-btn">Buy Now</button>
+
+		</div>
+		<div class="pill-box">
+			<img class="pill-image" src="./asset/img2/pill2.png">
+			<p class="pill-info">Advanced Ecstasy Pill - 120mg <bo>MDMA</bo> </p>
+			<button onclick="window.open('./index.html', '_self')"  class="buy-btn">Buy Now</button>
+
+		</div>
+	</section>
+	<p>Note : it's a fake website for a web project, DO NOT TAKE ANY INFORMATION OF THIS SITE SERIOUSLY</p>
+	<script src="./js/buy.js"></script>
+	<script>
+	const buyButton = document.querySelector('#buy-now-btn');
+	const pillGrid = document.querySelector('.pill-grid');
+	
+	buyButton.addEventListener('click', () => {
+		pillGrid.classList.add('show');
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    transition: height 3s;
+}
+:root {
+    /*color palette*/
+
+    --menu-color: white;
+    --button-sub-menu-color: #cdbace;
+    --menu-text-color: #65655d;
+    --home-bg-color: rgba(176, 162, 211, 0.78);
+    --home-bg-color-active: rgb(133, 137, 232);
+    --links-active-color: #3eea00;
+    --title-color: rgba(0, 0, 0, 0.6);
+    --button-color: rgb(95, 95, 210);
+
+    --content-infos-color: #6b8f5f;
+    --msg-color:darkseagreen;
+    --funfact-color: #bc8f8f;
+
+}
+body{
+    background-color:#93B874;
+
+}
+
+/*nav bar code*/
+.navbar {
+    background-color: var(--menu-color);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: black 0 0 5px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+}
+
+
+/*menu list*/
+
+ul{
+    list-style: none;
+}
+.nav-item > a {
+    text-decoration: none;
+    color: var(--menu-text-color);
+    font-size: 30px;
+    letter-spacing: 2px;
+
+
+}
+
+.navbar > a{
+    text-decoration: none;
+    color: var(--menu-text-color);
+    letter-spacing: 2px;
+    border:none;
+}
+
+.home-button{
+    --menu-text-color: #eeeeee;
+    font-size:50px;
+    padding:25px;
+    background: var(--home-bg-color);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 30px 0;
+    width:15vw;
+    transition: width 2s;
+
+
+
+}
+
+.home-button:hover{
+    background: var(--home-bg-color-active);
+    color:white;
+    width:25vw;
+    transition: width 2s;
+}
+
+.nav-menu{
+    display:flex;
+    flex-direction:row;
+    gap:50px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right:20px;
+    font-size:20px;
+    align-self: center;
+    margin-left:20px;
+
+
+
+}
+.sub-menu{
+    position: absolute;
+    margin-top:10px;
+    box-shadow: rgb(228 255 0 / 24%) 0 3px 15px;
+    padding:10px;
+    transform:translateX(-7%);
+    background-color:var(--button-sub-menu-color);
+    border-radius: 5px;
+    display:none;
+    animation:open_menu 500ms alternate;
+}
+
+
+
+@keyframes open_menu {
+    from{
+        height:0;
+        opacity: 0;
+    }
+    to{
+        height:100%;
+        opacity: 100%;
+    }
+
+}
+
+
+
+@keyframes glow {
+    from  {
+        text-shadow: #00e300 0 7px 15px ;
+
+    }
+
+    to{
+        text-shadow: #00e300 0 10px 20px ;
+
+    }
+}
+
+
+.nav-item > a:hover {
+    color:var(--links-active-color);
+    animation: glow alternate-reverse infinite 1s ease-in-out;
+}
+
+
+.nav-item > a:active {
+    color:var(--links-active-color);
+    animation: glow alternate-reverse infinite 1s ease-in-out;
+}
+
+
+header{
+    margin-top:108px;
+    display:flex;
+    justify-content: center;
+    width:100%;
+    height:50vh;
+    position: relative;
+    align-items: center;
+    background: url('../asset/img3/nvdia.jpg') center center no-repeat;
+    background-size:cover;
+    z-index: 0;
+
+
+
+
+}
+
+header > *{
+    z-index: 1;
+}
+
+.blur-bg{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(5px);
+
+}
+
+.title{
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    padding:10px;
+    width:fit-content;
+
+
+
+}
+.what-nvdia{
+    width:100%;
+    display: flex;
+    justify-content: left;
+    animation: coming 1s ease-in-out;
+    animation-fill-mode: forwards;         /* When the spec is finished */
+    flex-direction: column;
+    position: relative;
+    margin-top:50px;
+    margin-bottom: 50px;
+
+}
+
+.title-wrapper{
+    background:var(--content-infos-color);
+    color:white;
+    padding:10px;
+    width:fit-content;
+    text-align: center;
+
+    animation: expand_title 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+
+
+
+
+
+
+}
+
+.title-wrapper > h1{
+    font-size: 40px;
+}
+.title-wrapper>  p{
+    font-size:20px;
+    font-style: italic;
+}
+
+.info{
+    background:var(--content-infos-color);
+    animation: expand 1.5s ease-in-out;
+    animation-fill-mode: forwards;
+    border-radius: 0 0 50px 50px;
+    padding:10px;
+
+}
+
+.info-nvida-wrapper{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width:100%;
+    font-size: 20px;
+    padding:10px;
+}
+
+.info-nvida-wrapper > img{
+    width:800px;
+}
+
+p.nvida-infos{
+    font-size: 20px;
+    padding:10px;
+    color:white;
+    background-color:var(--msg-color);
+    margin:10px;
+    border-radius: 5px 5px 5px 0;
+    max-width: 50%;
+}
+
+.msg{
+    display: flex;
+    align-items: flex-end;
+
+
+
+
+}
+
+
+.my-pp{
+    border-radius:50%;
+    width:64px;
+}
+
+.msg-container{
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+}
+
+
+.pictures-container{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+
+
+}
+
+.pictures-container > .img-info >img{
+    width: 385px;
+    height: 318px;
+}
+
+.pictures-container > .msg{
+    justify-content: center;
+
+}
+
+
+.pictures-container > .msg > p {
+    --msg-color: #AD8FBCFF
+}
+
+
+
+.img-info{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+    max-width: 50vh;
+
+}
+
+
+
+.img-info > p {
+    color:white;
+}
+@keyframes coming {
+    from{
+        justify-content: left;
+        transform: translateX(-100%);
+    }
+    to{
+        justify-content: center;
+        align-items: center;
+        width:100%;
+
+
+    }
+
+
+}
+
+@keyframes expand_title {
+    from{
+        opacity: 1;
+        width:0;
+
+    }
+
+    to{
+        opacity: 1;
+        width:90%;
+
+    }
+}
+
+@keyframes expand {
+    from{
+        opacity: 0;
+
+    }
+
+    80%{
+        opacity: 0;
+        width:0;
+        height:0
+    }
+    to{
+        opacity: 1;
+        width:90%;
+        height:100%;
+
+    }
+
+}
+
+
+.fun-fact-button{
+    padding:10px;
+    font-size:25px;
+    background: var(--button-sub-menu-color);
+    border-radius:10px;
+    color:white;
+    text-align: center;
+    border:2px solid black;
+    cursor:pointer;
+}
